@@ -42,6 +42,7 @@ export class ListTodosComponent implements OnInit {
       }
     )
   }
+  
   completeItem(id){
     console.log(`complete todo ${id}`)
     this.todoService.deleteTodo('sena', id).subscribe(
@@ -52,6 +53,7 @@ export class ListTodosComponent implements OnInit {
       }
     )
   }
+  
   deleteTodo(id){
     console.log(`delete todo ${id}`)
     this.todoService.deleteTodo('sena', id).subscribe(

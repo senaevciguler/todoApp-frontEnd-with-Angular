@@ -21,13 +21,15 @@
             (ngModelChange)="todo.targetDate = $event"
             class="form-control" name="targetDate" required="required" >
         </fieldset>
-        <fieldset class="form-group">
+        
+        <!--<fieldset class="form-group">
             <label>is Completed</label>
             <input type="checkbox" #done="ngModel"
             [ngModel]="todo.done"
             (ngModelChange)="todo.done = $event"
             class="form-control" name="done" required="required" >
         </fieldset>
+-->
 
         <button type="submit" class="btn btn-success">Save</button>
     </form>

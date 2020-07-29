@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+
   id:number
   todo:Todo
 
@@ -23,15 +24,15 @@ export class TodoComponent implements OnInit {
     this.todo = new Todo(this.id,'',false,new Date());
 
     if(this.id != -1){
-      this.todoService.retrieveTodo('sena', this.id)
+      this.todoService.retrieveTodo('Sena', this.id)
       .subscribe(
       data => this.todo = data
       )
   }
 }
   saveTodo(){
-    if(this.id === -1){
-      this.todoService.createTodo('sena',this.todo)
+    if(this.id == -1){
+      this.todoService.createTodo('Sena',this.todo)
       .subscribe(
           data =>{
             console.log(data)
@@ -40,7 +41,7 @@ export class TodoComponent implements OnInit {
         
       )
     }else{
-      this.todoService.updateTodo('sena',this.id,this.todo)
+      this.todoService.updateTodo('Sena',this.id,this.todo)
       .subscribe(
         
           data =>{
